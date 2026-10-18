@@ -201,6 +201,17 @@
     .cartes-resa { display: flex; }
   }
 </style>
+<style>
+
+/* Liens SDC intégrés à la page : aucune commande flottante. */
+.sdc-crossnav{display:flex;align-items:center;gap:8px;width:100%;min-height:52px;padding:5px 10px;box-sizing:border-box;background:#171b20;border-bottom:1px solid #ffffff26}
+.sdc-crossnav a{display:flex;align-items:center;justify-content:center;flex:1;min-width:0;min-height:40px;padding:6px 8px;box-sizing:border-box;border-radius:8px;font:800 12px/1.2 system-ui,sans-serif;text-align:center;text-decoration:none;color:#fff}
+.sdc-crossnav-booking{background:#e8500a}
+.sdc-crossnav-home{background:#323b44;border:1px solid #ffffff55}
+.sdc-crossnav a:focus-visible{outline:3px solid #fff;outline-offset:2px}
+@media(max-width:370px){.sdc-crossnav a{font-size:11px;padding:5px}}
+.sdc-crossnav{position:sticky;top:0;z-index:41;background:#193324}.nav-zone{top:52px}
+</style>
 </head>
 <body>
 
@@ -216,6 +227,10 @@
   disponibles pendant la saison. Mode hors ligne inclus : une fois chargée, l'application reste utilisable même sans connexion.
 </div>
 
+<nav class="sdc-crossnav" aria-label="Liens Structure de Cuisine">
+  <a class="sdc-crossnav-booking" href="https://calendar.app.google/C6T8ht7aV2FZx1hf7" target="_blank" rel="noopener noreferrer">Prendre rendez-vous · 30 min</a>
+  <a class="sdc-crossnav-home" href="https://structuredecuisine.ca/">Accueil SDC</a>
+</nav>
 <div class="nav-zone">
 <button class="retour" id="btnRetour" onclick="retourOnglet()" aria-label="Revenir à l'onglet précédent">← Retour</button>
 <div class="nav-defile">
